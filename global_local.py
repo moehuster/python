@@ -31,8 +31,8 @@ print fahren_to_kelvin(32)
 # the risk/reward of using global variable
 
 # risk -consider the software system for an airliner
-#	critical piece - flight control system
-#	non-critical piece - in-flight entertainment system
+#       critical piece - flight control system
+#       non-critical piece - in-flight entertainment system
 
 # both systems might use a variable called "dial"
 # we don't want possibility that change the volume on your autio
