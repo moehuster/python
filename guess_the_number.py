@@ -3,7 +3,6 @@
 # all output for the game will be printed in the console
 import simplegui
 import random
-import math
 
 # initialize global variables used in your code
 num_range = 100
@@ -12,7 +11,7 @@ guess_number = 0
 
 # helper function to start and restart the game
 def new_game():
-    global num_range, guess_remain, guess_number
+    global guess_remain, guess_number
     if (num_range == 100):
         guess_remain = 7
     else:
@@ -39,7 +38,7 @@ def range1000():
 
 def input_guess(guess):
     # main game logic goes here
-    global num_range, guess_remain, guess_number
+    global guess_remain
     guess_remain = guess_remain - 1
     print "Guess was", guess
     print "Number of remaining guesses is", guess_remain
@@ -52,6 +51,7 @@ def input_guess(guess):
         print "Correct!\n"
         new_game()
     if (guess_remain == 0):
+        print "The number is", guess_number
         print "Game over!\n"
         new_game()
 
